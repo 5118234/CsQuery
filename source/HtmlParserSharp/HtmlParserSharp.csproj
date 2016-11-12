@@ -72,10 +72,12 @@
     <Compile Include="HtmlParserSharp\Parser.cs" />
     <Compile Include="HtmlParserSharp\SimpleHtmlParser.cs" />
     <Compile Include="HtmlParserSharp\TreeBuilders\XmlTreeBuilder.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="HtmlParserSharp\SampleData\test.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

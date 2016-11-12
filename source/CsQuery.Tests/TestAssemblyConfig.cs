@@ -15,7 +15,7 @@ namespace CsQuery.Tests
     [SetUpFixture,TestClass]
     public class TestAssemblyConfig
     {
-        [SetUp]
+        [OneTimeSetUp]
         public static void AssemblySetup()
         {
 
@@ -31,7 +31,7 @@ namespace CsQuery.Tests
             CsQueryTest.SolutionDirectory = Support.CleanFilePath(solutionFolderTry+"/../");
         }
         
-        [TearDown]
+        [OneTimeTearDown]
         public static void AssemblyTeardown()
         {
             
