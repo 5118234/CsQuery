@@ -33,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\CsQuery.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -49,6 +50,102 @@
     <Content Include="README-compilation.md" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Common\Attributes.cs">
+      <Link>HtmlParserSharp\Common\Attributes.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Common\DoctypeExpectation.cs">
+      <Link>HtmlParserSharp\Common\DoctypeExpectation.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Common\DocumentMode.cs">
+      <Link>HtmlParserSharp\Common\DocumentMode.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Common\DocumentModeEventArgs.cs">
+      <Link>HtmlParserSharp\Common\DocumentModeEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Common\EncodingDetectedEventArgs.cs">
+      <Link>HtmlParserSharp\Common\EncodingDetectedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Common\ITokenHandler.cs">
+      <Link>HtmlParserSharp\Common\ITokenHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Common\ParserErrorEventArgs.cs">
+      <Link>HtmlParserSharp\Common\ParserErrorEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Common\XmlViolationPolicy.cs">
+      <Link>HtmlParserSharp\Common\XmlViolationPolicy.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\AttributeName.cs">
+      <Link>HtmlParserSharp\Core\AttributeName.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\CharsetState.cs">
+      <Link>HtmlParserSharp\Core\CharsetState.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\CoalescingTreeBuilder.cs">
+      <Link>HtmlParserSharp\Core\CoalescingTreeBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\DispatchGroup.cs">
+      <Link>HtmlParserSharp\Core\DispatchGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\ElementName.cs">
+      <Link>HtmlParserSharp\Core\ElementName.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\HtmlAttributes.cs">
+      <Link>HtmlParserSharp\Core\HtmlAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\ILocator.cs">
+      <Link>HtmlParserSharp\Core\ILocator.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\InsertionMode.cs">
+      <Link>HtmlParserSharp\Core\InsertionMode.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\ITreeBuilderState.cs">
+      <Link>HtmlParserSharp\Core\ITreeBuilderState.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\Locator.cs">
+      <Link>HtmlParserSharp\Core\Locator.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\NamedCharacterAccel.cs">
+      <Link>HtmlParserSharp\Core\NamedCharacterAccel.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\NamedCharacters.cs">
+      <Link>HtmlParserSharp\Core\NamedCharacters.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\NCName.cs">
+      <Link>HtmlParserSharp\Core\NCName.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\Portability.cs">
+      <Link>HtmlParserSharp\Core\Portability.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\StackNode.cs">
+      <Link>HtmlParserSharp\Core\StackNode.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\StateSnapshot.cs">
+      <Link>HtmlParserSharp\Core\StateSnapshot.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\TaintableLocator.cs">
+      <Link>HtmlParserSharp\Core\TaintableLocator.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\Tokenizer.cs">
+      <Link>HtmlParserSharp\Core\Tokenizer.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\TreeBuilder.cs">
+      <Link>HtmlParserSharp\Core\TreeBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\TreeBuilderConstants.cs">
+      <Link>HtmlParserSharp\Core\TreeBuilderConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Core\UTF16Buffer.cs">
+      <Link>HtmlParserSharp\Core\UTF16Buffer.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\Parser.cs">
+      <Link>HtmlParserSharp\Parser.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\SimpleHtmlParser.cs">
+      <Link>HtmlParserSharp\SimpleHtmlParser.cs</Link>
+    </Compile>
+    <Compile Include="..\HtmlParserSharp\HtmlParserSharp\TreeBuilders\XmlTreeBuilder.cs">
+      <Link>HtmlParserSharp\TreeBuilders\XmlTreeBuilder.cs</Link>
+    </Compile>
     <Compile Include="Config.cs" />
     <Compile Include="Config\enumDomRenderingOptions.cs" />
     <Compile Include="Config\enumStartupOptions.cs" />
@@ -395,16 +492,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="HtmlParserSharp\HtmlParserSharp\Common\" />
-    <Folder Include="HtmlParserSharp\HtmlParserSharp\Core\" />
-    <Folder Include="HtmlParserSharp\HtmlParserSharp\TreeBuilders\" />
     <Folder Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HtmlParserSharp\HtmlParserSharp.csproj">
-      <Project>{df457a49-433c-4d47-8d6d-b66f76ff4e56}</Project>
-      <Name>HtmlParserSharp</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
