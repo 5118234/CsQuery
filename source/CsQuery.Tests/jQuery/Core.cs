@@ -7,6 +7,7 @@ using System.Dynamic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using Assert = NUnit.Framework.Assert;
+using Description = Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute;
 using MsTestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
 using TestContext = NUnit.Framework.TestContext;
 using CsQuery;
@@ -434,9 +435,8 @@ namespace CsQuery.Tests.jQuery
             recursive.foo = target;
 
             CQ.Extend(true, target, recursive);
-            dynamic compare = CQ.ParseJSON("{ 'bar':5 }");
-
-            Assert.AreEqual(target, compare, "Check to make sure a recursive obj doesn't go never-ending loop by not copying it over");
+            JsObject compare = (JsObject)CQ.ParseJSON("{ 'bar':5 }");
+            Assert.IsFalse(((IDictionary<string, object>)target).ContainsKey("foo"), "Check to make sure a recursive obj doesn't go never-ending loop by not copying it over");
 
             // These next checks don't really apply as they are specific to javascript nuances, but can't hurt
 

@@ -8,6 +8,7 @@ using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using Assert = NUnit.Framework.Assert;
+using Description = Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute;
 using NDescription = NUnit.Framework.DescriptionAttribute;
 using MsTestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
 using TestContext = NUnit.Framework.TestContext;
@@ -27,7 +28,7 @@ namespace CsQuery.Tests
         [Test,TestMethod]
         public void AnalyzeAndVerify()
         {
-            var assem = typeof (TestTests).GetTypeInfo().Assembly;
+            var assem = typeof(TestTests).GetTypeInfo().Assembly;
             foreach (var type in assem.GetTypes())
             {
                 VerifyType(type);
@@ -114,7 +115,7 @@ namespace CsQuery.Tests
         private bool VerifyClass(Type type)
         {
             HashSet<Type> hasAttributes = new HashSet<Type>();
-            var typeAttributes = type.GetTypeInfo().GetCustomAttributes(true).Select(item=>item.GetType());
+            var typeAttributes = type.GetCustomAttributes(true).Select(item=>item.GetType());
             foreach (var attr in typeAttributes)
             {
                 if (TestClassAttributes.Contains(attr))

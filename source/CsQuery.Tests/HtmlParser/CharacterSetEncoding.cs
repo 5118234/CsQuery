@@ -29,15 +29,12 @@ namespace CsQuery.Tests.HtmlParser
         string htmlEnd = "</div></body></html>";
         char hebrewChar = (char)164;
 
-        [OneTimeSetUp, TestInitialize]
-        public void Setup()
-        {
-            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-        }
+      
 
         [TestMethod, Test]
         public void MetaTag()
         {
+
             var encoder = Encoding.GetEncoding("windows-1255");
 
             var html = htmlStart + htmlStartMeta + htmlStart3 +hebrewChar + htmlEnd;
@@ -114,8 +111,10 @@ namespace CsQuery.Tests.HtmlParser
             Assert.AreEqual("₪", outputHebrewChar);
 
         }
-        
 
+        private string arabicExpected = @"البابا: اوقفوا ""المجزرة"" في سوريا قبل ان تتحول البلاد الى ""أطلال""";
+        
+        
         /// <summary>
         /// Removes the "meta http-equiv='Content-Type'" header, or replaces it with a different character set
         /// </summary>
@@ -141,6 +140,6 @@ namespace CsQuery.Tests.HtmlParser
             }
             return html.Substring(0, start) + replaceWith + html.Substring(end + 1);
         }
-        
+
     }
 }

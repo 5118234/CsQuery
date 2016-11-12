@@ -12,7 +12,6 @@ using CollectionAssert = NUnit.Framework.CollectionAssert;
 using StringAssert = NUnit.Framework.StringAssert;
 using TestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
 using MSClassInitialize = Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute;
-using System.Reflection;
 
 namespace CsQuery.Tests
 {
@@ -59,14 +58,14 @@ namespace CsQuery.Tests
 
         // NUnit methods
 
-        [OneTimeSetUp]
+        [TestFixtureSetUp]
         public virtual void FixtureSetUp()
         {
             //CQ.DefaultDocType = DocType.XHTML;
         }
 
 
-        [OneTimeTearDown]
+        [TestFixtureTearDown]
         public virtual void FixtureTearDown()
         {
           
@@ -110,11 +109,11 @@ namespace CsQuery.Tests
             {
                 return Dom.Select((string)parm);
             }
-            else if (typeof(IEnumerable<IDomObject>).GetTypeInfo().IsInstanceOfType(parm))
+            else if (typeof(IEnumerable<IDomObject>).IsAssignableFrom(parm.GetType()))
             {
                 return Dom.Select((IEnumerable<IDomObject>)parm);
             }
-            else if (typeof(IDomObject).GetTypeInfo().IsInstanceOfType(parm))
+            else if (typeof(IDomObject).IsAssignableFrom(parm.GetType()))
             {
                 return Dom.Select((IDomObject)parm);
             }
